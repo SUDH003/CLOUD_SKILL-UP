@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Artisanal E-Commerce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Product Detail</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-details">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>Price: ${{ product.price }}</p>
+            <button onclick="addToCart({{ product.id }})">Add to Cart</button>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
