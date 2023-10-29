@@ -1,0 +1,22 @@
+
+<html>
+
+<body>
+
+{% with message =mget_flashed_message()%}
+     {% if message%}
+          {%for message in messages %}
+                    <p>{{message}}</p>
+           {%endfor%}
+        {%endif%}
+     {%endwidth%}
+
+
+<h1>welcome people<h1>
+<a href = "{{url_for{"/login)}}">LOGIN</a>
+
+
+</body>
+
+
+</html>
